@@ -1,0 +1,39 @@
+username = input("Create username: ")
+password = input("Create password: ")
+is_running = True
+check = False
+i=3
+
+while check == False and is_running == True:
+  print("---------------")
+  print("Enter Username and Password")
+  print()
+  ask_username = input("Enter your username: ")
+  ask_password = input("Enter your password: ")
+  print()
+  if ask_username == username and ask_password == password:
+    print("Welcome")
+    check = True
+    is_running = False
+
+  elif ask_username == username:
+    print("Incorrect password")
+    print("Try Again")
+    i=i-1
+    print()
+
+  elif ask_password == password:
+    print("Incorrect username")
+    print("Try Again")
+    print()
+    i=i-1
+
+  else:
+    print("Incorrect username and password")
+    print("Try Again")
+    print()
+    i=i-1
+
+  if i == 0:
+    print("---------------")
+    print("Out Of Attempts")
